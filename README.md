@@ -20,5 +20,28 @@ v4.2.war
 
 Create the image:
 ```
-docker build --rm=true -t "bouquet" .
+sudo docker build --rm=true -t "squidsolutions/bouquet" .
+```
+
+Test it:
+
+```
+sudo docker run -p 80:80 -t squidsolutions/bouquet
+# http://localhost/release/v4.2/rs/status ?
+```
+
+Tag it with the build #:
+
+```
+sudo docker images # Get the image ID
+sudo docker tag IMAGEID squidsolutions/bouquet:build_29
+```
+
+Push it to Docker hub:
+
+```
+sudo docker login
+# See https://phab.squidsolutions.com/K6
+sudo docker push squidsolutions/bouquet:build_29
+sudo docker push squidsolutions/bouquet:latest
 ```
