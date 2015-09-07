@@ -4,8 +4,8 @@ FROM squid/kraken-bin
 ADD postfix.conf /etc/postfix/main.cf
 ADD apache.conf /etc/apache2/sites-available/000-default.conf
 ADD tomcat-wrapper.sh /etc/tomcat-wrapper.sh
-ADD cache.json /opt/squid/kraken/etc/cache.json
-ADD docker.xml /opt/squid/kraken/etc/docker.xml
+ADD cache.json /opt/squid/bouquet/etc/cache.json
+ADD docker.xml /opt/squid/bouquet/etc/docker.xml
 ADD explorer_webapp.xml /usr/share/tomcat7/explorer_webapp.xml
 ADD supervisord.conf /etc/supervisord.conf
 
