@@ -2,7 +2,8 @@ FROM ubuntu:trusty
 
 ENV DEBIAN_FRONTEND noninteractive 
 RUN apt-get update && apt-get install -y mongodb redis-server redis-tools tomcat7 apache2-mpm-worker \
-	locales supervisor
+	locales supervisor \
+	&& apt-get upgrade -y
 
 RUN a2enmod proxy_http rewrite
 
