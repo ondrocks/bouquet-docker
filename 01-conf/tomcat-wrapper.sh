@@ -3,7 +3,7 @@
 
 TOMCAT7_USER=tomcat7
 TOMCAT7_GROUP=tomcat7
-JAVA_OPTS="-Djava.awt.headless=true -Xmx128m -XX:+UseConcMarkSweepGC"
+JAVA_OPTS="-Djava.awt.headless=true -Xmx512m -XX:+UseConcMarkSweepGC"
 export JAVA_OPTS="${JAVA_OPTS} -Des.path.data=/var/lib/tomcat7/caches -Des.network.bind_host=127.0.0.1 -DDEBUG.MONGO=true -DDB.TRACE=true -Dlogback.configurationFile=logback.xml -Duser.timezone=UTC -Dkraken.cache.config.json=/opt/squid/bouquet/etc/cache.json -Dkraken.facet=front,keyserver,queries,queryworker -Dkraken.config.file=/opt/squid/bouquet/etc/bouquet.xml -Dkraken.ehcache.config=../../../var/lib/tomcat7/webapps/v4.2/conf/kraken_v4_ehcache.xml"
 JAVA_HOME=/usr/lib/jvm/default-java
 NAME=tomcat7
