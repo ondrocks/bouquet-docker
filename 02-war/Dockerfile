@@ -1,4 +1,4 @@
-FROM squid/kraken-conf
+FROM squidsolutions/bouquet-conf
 
 ADD v4.2.war /var/lib/tomcat7/webapps/v4.2.war
 ADD admin.war /var/lib/tomcat7/webapps/admin.war
