@@ -4,9 +4,8 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
 
-RUN apt-get update && apt-get install -y mongodb redis-server redis-tools tomcat7 apache2-mpm-worker \
-	locales supervisor \
-	&& apt-get upgrade -y
+RUN apt-get update && apt-get install -y mongodb-server mongodb-clients redis-server redis-tools tomcat7 apache2-mpm-worker \
+	supervisor && apt-get clean
 
 RUN a2enmod proxy_http rewrite
 
