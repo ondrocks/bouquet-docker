@@ -25,14 +25,11 @@
         <entry key="mail.hostName">127.0.0.1</entry>
         <entry key="mail.sslPort">25</entry>
 
-
-         <!-- For SMTP with TLS auth
         <entry key="mail.senderPassword">XXXX</entry>
         <entry key="mail.hostName">smtp.gmail.com</entry>
         <entry key="mail.sslPort">465</entry>
         <entry key="mail.senderName">YYYY</entry>
 
-         -->
        <entry key="mail.senderEmail">noreply@squidsolutions.com</entry>
 
         <!-- *** sign-up *** -->
