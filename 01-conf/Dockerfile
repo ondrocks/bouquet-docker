@@ -8,6 +8,9 @@ ADD bouquet.xml /opt/squid/bouquet/etc/bouquet.xml
 ADD explorer_webapp.xml /usr/share/tomcat7/explorer_webapp.xml
 ADD supervisord.conf /etc/supervisord.conf
 
+ADD landing-page/index.html /var/www/index.html
+ADD landing-page/logo.png /var/www/logo.png
+
 RUN a2enmod proxy_http rewrite headers
 
 ENV LANG C.UTF-8
