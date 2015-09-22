@@ -9,6 +9,7 @@ Procedure
 ---------
 
 Download the lastest succcessful build of admin, auth and bouquet builds. Put them in `the 02-war/` dir.
+Put the plugins in the same directory:
 
 ```
 $ ls 02-war/ -1
@@ -16,21 +17,16 @@ admin.war
 auth.war
 Dockerfile
 v4.2.war
-```
-
-Change the kraken.plugin.dir in the config 01-conf/tomcat-wrapper.sh 
-```
-export JAVA_OPTS="${JAVA_OPTS} -Des.path.data=/var/lib/tomcat7/caches -Dkraken.plugin.dir=/WHEREEVER -Des.network.bind_host=127.0.0.1 -DDEBUG.MONGO=true -DDB.TRACE=true -Dlogback.configurationFile=logback.xml -Duser.timezone=UTC -Dkraken.cache.config.json=/opt/squid/bouquet/etc/cache.json -Dkraken.facet=front,keyserver,queries,queryworker -Dkraken.config.file=/opt/squid/bouquet/etc/bouquet.xml -Dkraken.ehcache.config=../../../var/lib/tomcat7/webapps/v4.2/conf/kraken_v4_ehcache.xml"
+v4-db-plugin-oracle-1.0.0-t_302-SNAPSHOT-jar-with-dependencies.jar
+v4-db-plugin-postgresql-1.0.0-t_302-SNAPSHOT-jar-with-dependencies.jar
 ```
 
 Create the image:
 ```
-sudo docker build --rm=true -t "squidsolutions/bouquet" .
+sudo docker build --rm=true -t "squidsolutions/bouquet-bin" 00-bin
+sudo docker build --rm=true -t "squidsolutions/bouquet-conf" 01-conf
+sudo docker build --rm=true -t "squidsolutions/bouquet" 02-war
 ```
-
-Now, Put the plugins that correspond to your databases inside this directory kraken.plugin.dir;
-For example v4-db-plugin-postgresql-1.0.0-RELEASE-jar-with-dependencies.jar to get access to a postgreSQL database;
-Spark requires two jar the v4-db-plugin-spark-1.0.0-RELEASE-jar-with-dependencies.jar and hive-jdbc-1.1.0+SquidSolutions-standalone.jar
 
 Test it:
 
