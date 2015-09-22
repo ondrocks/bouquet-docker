@@ -4,6 +4,9 @@
 
         <entry key="kraken.ws.host">127.0.0.1:8080</entry>
 
+	<!-- enable 'dev' mode for server --> 
+	<entry key="kraken.server.mode">dev</entry>
+
         <!--
                 *** mongodb properties ***
                 for replicat-sets definition, hosts and ports should be separated by a comma (,)
