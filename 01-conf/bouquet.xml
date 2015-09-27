@@ -38,4 +38,6 @@
         <!-- *** sign-up *** -->
         <entry key="signup.email.bcc">api-support@squidsolutions.com</entry>
 
+        <entry key="feature.dynamic">true</entry>
+
 </properties>
