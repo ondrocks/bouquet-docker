@@ -4,7 +4,9 @@
 
         <entry key="kraken.ws.host">127.0.0.1:8080</entry>
 
-	<!-- enable 'dev' mode for server --> 
+	<!--	enable 'dev' mode for server  
+		 This allows any application from any website to use the Bouquet server 
+		 Don't use it in a production environment ! -->
 	<entry key="kraken.server.mode">dev</entry>
 
         <!--
@@ -20,6 +22,7 @@
         <!-- 
                 The default url added to client.urls when creating a new Customer.
                 This should be your API public domain.
+		Useless if kraken.server.mode is "dev"
         -->
         <entry key="default.client.url">localhost</entry>
 
