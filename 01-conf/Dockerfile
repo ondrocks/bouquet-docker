@@ -18,5 +18,7 @@ ENV LC_ALL C.UTF-8
 
 RUN chmod 755 /etc/tomcat-wrapper.sh
 
+VOLUME /var/lib/mongodb
+
 EXPOSE 80
 CMD ["/usr/bin/supervisord", "-k", "-c", "/etc/supervisord.conf"]
