@@ -2,7 +2,6 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>OpenBouquet</title>
     <script type="text/javascript">
-
 		var pageUrl = window.location.href;
 
         // Wait for the page to load first
@@ -22,14 +21,32 @@
           }
         }
     </script>
+    <style type="text/css">
+        h1, h1 {
+            color: #485662 !important;
+        }
+        code {
+            font-size: 16px !important;
+        }
+    </style>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
+<div class="container">
 <img src="logo.png">
+<div class="page-header">
+
 <h1>Hurray, it works !</h1>
+</div>
 <p>
 Thanks for using Bouquet. We really appreciate it.
 <br>
-If you can read this page, it means that Bouquet is working properly. 
+If you can read this page, it means that Bouquet is working properly.
 </p>
 <p>
 What have you just installed? A lot:
@@ -41,34 +58,33 @@ What have you just installed? A lot:
 </ul>
 Bouquet also brings an internal <a href="https://www.elastic.co/">Elasticsearch</a> server, that will automatically index your facets and provide you the best filtering experience using your data.
 <p></p>
-
+<div class="page-header">
 <h1>Now what ?</h1>
+</div>
 <p>
-How about checking out a really simple analytics app: an app to Export your data in a fast &amp; easy way. <a id="open-app-export" href="http://openbouquet.io/apps/release/app-export/index.html" target="_blank">Click here</a>, and away!
+How about checking out a really simple analytics app: an app to Export your data in a fast &amp; easy way.</p>
+<p><a class="btn btn-lg btn-primary" id="open-app-export" href="http://openbouquet.io/apps/release/app-export/index.html" target="_blank">Click here</a> and away!</p>
 </p>
 <h3>I just clicked, and I'm asked for a login and password</h3>
 <p>
-You have been redirected to the authentication page of your Bouquet instance, where you can use the login "super" with the password "super123".
+<div class="well">You have been redirected to the authentication page of your Bouquet instance, where you can use the login "super" with the password "super123".</div>
 </p>
 
 <h3>I just authenticated, but now I see openbouquet.io on my address bar , not my Bouquet installation!</h3>
 <p>
-Great, now you're authenticated. But don't worry, you're still using your Bouquet instance. See that <code>?apiUrl=</code> at the end of the address ? That's it. That's the address of the Docker container that hosts your own Bouquet server.
+<div class="well">Great, now you're authenticated. But don't worry, you're still using your Bouquet instance. See that <code>?apiUrl=</code> at the end of the address ? That's it. That's the address of the Docker container that hosts your own Bouquet server.
 </p>
 <p>
 That's the power of Bouquet's API. You can use whatever javascript application from whatever website you want. If this application uses <a href="https://github.com/squidsolutions/jssdk2">Bouquet's javascript SDK</a>, you can use the <code>apiUrl</code> parameter to point to the Bouquet server you need.
 </p>
 <p>
-The javascript application does not directly access the data. That's why you don't even need to get it via HTTPS. Your browser downloads the application, and the locally-executed javascript connects to the Bouquet server hosted in your Docker container.
+The javascript application does not directly access the data. That's why you don't even need to get it via HTTPS. Your browser downloads the application, and the locally-executed javascript connects to the Bouquet server hosted in your Docker container.</div>
 </p>
 <h3>Now that I can use Bouquet with this app, how do I connect to my database?</h3>
 <p>
-That's where the real fun begins. Follow the instructions <a href="https://bouquet.zendesk.com/hc/en-us/articles/204891062-About-the-Export-App">right here</a>.
+<div class="well">That's where the real fun begins. Follow the instructions <a href="https://bouquet.zendesk.com/hc/en-us/articles/204891062-About-the-Export-App">right here</a>.</div>
 </p>
 
 Any further questions? Visit our <a href="https://bouquet.zendesk.com/">Help Center</a> or leave a message to <a href="https://twitter.com/openbouquet">@Openbouquet</a>.
-
-
-
-
+</div>
 </body></html>
