@@ -8,9 +8,6 @@ ADD bouquet.xml /opt/squid/bouquet/etc/bouquet.xml
 ADD explorer_webapp.xml /usr/share/tomcat7/explorer_webapp.xml
 ADD supervisord.conf /etc/supervisord.conf
 
-ADD landing-page/index.html /var/www/html/index.html
-ADD landing-page/logo.png /var/www/html/logo.png
-
 RUN a2enmod proxy_http rewrite headers cgi
 
 ENV LANG C.UTF-8
@@ -22,3 +19,16 @@ VOLUME /var/lib/mongodb
 
 EXPOSE 80
 CMD ["/usr/bin/supervisord", "-k", "-c", "/etc/supervisord.conf"]
+
+RUN mkdir /var/www/html/fonts /var/www/html/js /var/www/html/css
+
+ADD js/bootstrap.min.js /var/www/html/js/bootstrap.min.js
+ADD js/jquery-1.11.3.min.js /var/www/html/js/jquery-1.11.3.min.js
+ADD fonts/glyphicons-halflings-regular.woff2 /var/www/html/fonts/glyphicons-halflings-regular.woff2
+ADD fonts/glyphicons-halflings-regular.ttf /var/www/html/fonts/glyphicons-halflings-regular.ttf
+ADD fonts/glyphicons-halflings-regular.woff /var/www/html/fonts/glyphicons-halflings-regular.woff
+ADD fonts/glyphicons-halflings-regular.eot /var/www/html/fonts/glyphicons-halflings-regular.eot
+ADD fonts/glyphicons-halflings-regular.svg /var/www/html/fonts/glyphicons-halflings-regular.svg
+ADD index.html /var/www/html/index.html
+ADD logo.png /var/www/html/logo.png
+ADD css/bootstrap.min.css /var/www/html/css/bootstrap.min.css
