@@ -15,7 +15,7 @@
           //Set code to run when the link is clicked
           // by assigning a function to "onclick"
           a.onclick = function() {
-          	var target = "http://api.squidsolutions.com/apps/release/app-export?apiUrl="+pageUrl;
+          	var target = "http://openbouquet.io/apps/release/app-export?apiUrl="+pageUrl;
           	var redirectWindow = window.open(target, "_blank");
     		redirectWindow.location;
         	return false;
@@ -34,22 +34,39 @@ If you can read this page, it means that Bouquet is working properly.
 <p>
 What have you just installed? A lot:
 </p><ul>
-<li>Bouquet server components, hosted as webapps in a Tomcat server</li>
+<li><a href="http://openbouquet.io">Bouquet</a> server components, hosted as webapps in a Tomcat server</li>
 <li>Apache2 as the web frontend</li>
-<li>MongoDB, used to store metadata about your analytics</li>
-<li>Redis, which is used as a cache and makes things run faster</li>
+<li><a href="https://www.mongodb.org/">MongoDB</a>, used to store metadata about your analytics</li>
+<li><a href="http://www.redis.io/">Redis</a>, which is used as a cache and makes things run faster</li>
 </ul>
+Bouquet also brings an internal <a href="https://www.elastic.co/">Elasticsearch</a> server, that will automatically index your facets and provide you the best Filters experience using your data.
 <p></p>
 
-<h1>Now what</h1>
+<h1>Now what ?</h1>
 <p>
-How about checking out a really simple analytics app: an app to Export your data in a fast &amp; easy way. <a id="open-app-export" href="http://api.squidsolutions.com/apps/release/app-export">Click here</a>, and away!
+How about checking out a really simple analytics app: an app to Export your data in a fast &amp; easy way. <a id="open-app-export" href="http://openbouquet.io/apps/release/app-export" target="_blank">Click here</a>, and away!
 </p>
+<h3>I just clicked, and I'm asked for a login and password</h3>
 <p>
-You will be redirected to the authentication page, where you can use the login "super" with the password "super123".
+You have been redirected to the authentication page of your Bouquet instance, where you can use the login "super" with the password "super123".
 </p>
 
-Any questions? visit our <a href="https://bouquet.zendesk.com/">Help Center</a>.
+<h3>I just authenticated, but now I see openbouquet.io on my address bar , not my Bouquet installation!</h3>
+<p>
+Great, now you're authenticated. But don't worry, you're still using your Bouquet instance. See that <code>?apiUrl=</code> at the end of the address ? That's it. That's the address of the Docker container that hosts your own Bouquet server.
+</p>
+<p>
+That's the power of Bouquet's API. You can use whatever javascript application from whatever website you want. If this application uses <a href="https://github.com/squidsolutions/jssdk2">Bouquet's javascript SDK</a>, you can use the <code>apiUrl</code> parameter to point to the Bouquet server you need.
+</p>
+<p>
+The javascript application does not directly access the data. That's why you don't even need to get it via HTTPS. Your browser downloads the application, and the locally-executed javascript connects to the Bouquet server hosted in your Docker container.
+</p>
+<h3>Now that I can use Bouquet with this app, how do I connect to my database?</h3>
+<p>
+That's where the real fun begins. Follow the instructions <a href="https://bouquet.zendesk.com/hc/en-us/articles/204891062-About-the-Export-App">right here</a>.
+</p>
+
+Any further questions? Visit our <a href="https://bouquet.zendesk.com/">Help Center</a> or leave a message to <a href="https://twitter.com/openbouquet">@Openbouquet</a>.
 
 
 
