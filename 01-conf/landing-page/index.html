@@ -28,6 +28,11 @@
         code {
             font-size: 16px !important;
         }
+        .logo-container {
+            background: #ffc008;
+            padding: 20px 0px 20px 10px;
+            margin-top: 20px;
+        }
     </style>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -38,14 +43,15 @@
 </head>
 <body>
 <div class="container">
+<div class="logo-container">
 <img src="logo.png">
+</div>
 <div class="page-header">
 
 <h1>Hurray, it works !</h1>
 </div>
+<div class="start-content">
 <p>
-Thanks for using Bouquet. We really appreciate it.
-<br>
 If you can read this page, it means that Bouquet is working properly.
 </p>
 <p>
@@ -57,6 +63,7 @@ What have you just installed? A lot:
 <li><a href="http://www.redis.io/">Redis</a>, which is used as a cache and makes things run faster</li>
 </ul>
 Bouquet also brings an internal <a href="https://www.elastic.co/">Elasticsearch</a> server, that will automatically index your facets and provide you the best filtering experience using your data.
+</div>
 <p></p>
 <div class="page-header">
 <h1>Now what ?</h1>
@@ -70,7 +77,7 @@ How about checking out a really simple analytics app: an app to Export your data
 <div class="well">You have been redirected to the authentication page of your Bouquet instance, where you can use the login "super" with the password "super123".</div>
 </p>
 
-<h3>I just authenticated, but now I see openbouquet.io on my address bar , not my Bouquet installation!</h3>
+<h3>I just authenticated, but now I see openbouquet.io on my address bar, not my Bouquet installation!</h3>
 <p>
 <div class="well">Great, now you're authenticated. But don't worry, you're still using your Bouquet instance. See that <code>?apiUrl=</code> at the end of the address ? That's it. That's the address of the Docker container that hosts your own Bouquet server.
 </p>
