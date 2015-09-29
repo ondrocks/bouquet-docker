@@ -51,6 +51,14 @@ Test it:
 sudo docker run -p 80:80 -t squidsolutions/bouquet
 # http://localhost/release/v4.2/rs/status ?
 ```
+
+If you want to have persistent mongo metadata:
+
+```
+mkdir /var/tmp/mongo
+sudo docker run -p 80:80 -v /var/tmp/mongo:/var/lib/mongodb -t squidsolutions/bouquet
+```
+
 Push it to Docker hub:
 
 ```
