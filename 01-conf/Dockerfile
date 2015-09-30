@@ -32,3 +32,6 @@ ADD fonts/glyphicons-halflings-regular.svg /var/www/html/fonts/glyphicons-halfli
 ADD index.html /var/www/html/index.html
 ADD logo.png /var/www/html/logo.png
 ADD css/bootstrap.min.css /var/www/html/css/bootstrap.min.css
+ADD Components-List.html /var/www/html/Components-List.html
+ADD Components-List_fichiers/filelist.xml /var/www/html/Components-List_fichiers/filelist.xml
+ADD Components-List_fichiers/themedata.xml /var/www/html/Components-List_fichiers/themedata.xml
