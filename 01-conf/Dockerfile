@@ -20,18 +20,18 @@ VOLUME /var/lib/mongodb
 EXPOSE 80
 CMD ["/usr/bin/supervisord", "-k", "-c", "/etc/supervisord.conf"]
 
-RUN mkdir /var/www/html/fonts /var/www/html/js /var/www/html/css
+RUN mkdir /var/www/html/fonts /var/www/html/js /var/www/html/css /var/www/html/Components-List_fichiers
 
-ADD js/bootstrap.min.js /var/www/html/js/bootstrap.min.js
-ADD js/jquery-1.11.3.min.js /var/www/html/js/jquery-1.11.3.min.js
-ADD fonts/glyphicons-halflings-regular.woff2 /var/www/html/fonts/glyphicons-halflings-regular.woff2
-ADD fonts/glyphicons-halflings-regular.ttf /var/www/html/fonts/glyphicons-halflings-regular.ttf
-ADD fonts/glyphicons-halflings-regular.woff /var/www/html/fonts/glyphicons-halflings-regular.woff
-ADD fonts/glyphicons-halflings-regular.eot /var/www/html/fonts/glyphicons-halflings-regular.eot
-ADD fonts/glyphicons-halflings-regular.svg /var/www/html/fonts/glyphicons-halflings-regular.svg
-ADD index.html /var/www/html/index.html
-ADD logo.png /var/www/html/logo.png
-ADD css/bootstrap.min.css /var/www/html/css/bootstrap.min.css
-ADD Components-List.html /var/www/html/Components-List.html
-ADD Components-List_fichiers/filelist.xml /var/www/html/Components-List_fichiers/filelist.xml
-ADD Components-List_fichiers/themedata.xml /var/www/html/Components-List_fichiers/themedata.xml
+ADD landing-page/js/bootstrap.min.js /var/www/html/js/bootstrap.min.js
+ADD landing-page/js/jquery-1.11.3.min.js /var/www/html/js/jquery-1.11.3.min.js
+ADD landing-page/fonts/glyphicons-halflings-regular.woff2 /var/www/html/fonts/glyphicons-halflings-regular.woff2
+ADD landing-page/fonts/glyphicons-halflings-regular.ttf /var/www/html/fonts/glyphicons-halflings-regular.ttf
+ADD landing-page/fonts/glyphicons-halflings-regular.woff /var/www/html/fonts/glyphicons-halflings-regular.woff
+ADD landing-page/fonts/glyphicons-halflings-regular.eot /var/www/html/fonts/glyphicons-halflings-regular.eot
+ADD landing-page/fonts/glyphicons-halflings-regular.svg /var/www/html/fonts/glyphicons-halflings-regular.svg
+ADD landing-page/index.html /var/www/html/index.html
+ADD landing-page/logo.png /var/www/html/logo.png
+ADD landing-page/css/bootstrap.min.css /var/www/html/css/bootstrap.min.css
+ADD landing-page/Components-List.html /var/www/html/Components-List.html
+ADD landing-page/Components-List_fichiers/filelist.xml /var/www/html/Components-List_fichiers/filelist.xml
+ADD landing-page/Components-List_fichiers/themedata.xml /var/www/html/Components-List_fichiers/themedata.xml
