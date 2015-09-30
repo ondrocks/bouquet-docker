@@ -19,3 +19,6 @@ ADD 2185.dat /docker-entrypoint-initdb.d/2185.dat
 ADD 2187.dat /docker-entrypoint-initdb.d/2187.dat
 ADD 2189.dat /docker-entrypoint-initdb.d/2189.dat
 ADD toc.dat /docker-entrypoint-initdb.d/toc.dat
+
+RUN chmod 755 /docker-entrypoint-initdb.d
+RUN chmod 644 /docker-entrypoint-initdb.d/*.dat
