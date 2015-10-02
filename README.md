@@ -35,9 +35,9 @@ v4-db-plugin-greenplum-1.0.0-RELEASE-jar-with-dependencies.jar
 
 Create the image:
 ```
-sudo docker build --rm=true -t "squidsolutions/bouquet-bin" 00-bin
-sudo docker build --rm=true -t "squidsolutions/bouquet-conf" 01-conf
-sudo docker build --rm=true -t "squidsolutions/bouquet-war" 02-war
+sudo docker build --rm=true -t "squidsolutions/bouquet-bin" 00-bin && \
+sudo docker build --rm=true -t "squidsolutions/bouquet-conf" 01-conf && \
+sudo docker build --rm=true -t "squidsolutions/bouquet-war" 02-war && \
 sudo docker build --rm=true -t "squidsolutions/bouquet" 03-postgres
 # At this point you can already run bouquet.
 sudo docker build --rm=true -t "squidsolutions/bouquet:hadoop" 04-hadoop
