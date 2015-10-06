@@ -80,9 +80,12 @@ Bouquet also brings an internal <a href="https://www.elastic.co/" target="_blank
 <h1>Now what?</h1>
 </div>
 <p>
-How about checking out a really simple analytics app: an app to Export your data in a fast &amp; easy way.</p>
-<p><a class="btn btn-lg btn-primary" id="open-app-export" href="http://openbouquet.io/apps/release/app-export/index.html" target="_blank">Click here</a> and away!</p>
+Get started right away by using the
+<a class="btn btn-lg btn-primary" id="open-app-export" href="http://openbouquet.io/apps/release/app-export/index.html" target="_blank">Bouquet UI</a>
 </p>
+<p>You can then either start <a href="https://bouquet.zendesk.com/hc/en-us/articles/204891062-About-the-Export-App">exploring your own data</a> 
+or <a href="https://bouquet.zendesk.com/hc/en-us/articles/204989602-Load-PostgreSQL-Sample-Database-optional-">use a demonstration database</a>...
+
 <h3>I just clicked, and I'm asked for a login and password</h3>
 <p>
 <div class="well">You have been redirected to the authentication page of your Bouquet instance, where you can use the login <code>super</code> with the password <code>super123</code>.</div>
@@ -96,7 +99,7 @@ How about checking out a really simple analytics app: an app to Export your data
 That's the power of Bouquet's API. You can use whatever javascript application from whatever website you want. If this application uses <a href="https://github.com/squidsolutions/jssdk2">Bouquet's javascript SDK</a>, you can use the <code>apiUrl</code> parameter to point to the Bouquet server you need.
 </p>
 <p>
-The javascript application does not directly access the data. That's why you don't even need to get it via HTTPS. Your browser downloads the application, and the locally-executed javascript connects to the Bouquet server hosted in your Docker container.</div>
+The web servering the app does not directly access the data. That's why you don't even need to get it via HTTPS. Your browser downloads the application, and the locally-executed javascript connects to the Bouquet server hosted in your Docker container.</div>
 </p>
 <h3>Now that I can use Bouquet with this app, how do I connect to my database?</h3>
 <p>
