@@ -9,12 +9,12 @@
 
           //Get a reference to the link on the page
           // with an id of "mylink"
-          var a = document.getElementById("open-app-export");
+          var a = document.getElementById("open-bouquet");
 
           //Set code to run when the link is clicked
           // by assigning a function to "onclick"
           a.onclick = function() {
-          	var target = "http://openbouquet.io/apps/release/app-export/index.html?apiUrl="+pageUrl;
+          	var target = "http://openbouquet.io/apps/release/bouquet/index.html?apiUrl="+pageUrl;
           	var redirectWindow = window.open(target, "_blank");
     		redirectWindow.location;
         	return false;
@@ -81,9 +81,9 @@ Bouquet also brings an internal <a href="https://www.elastic.co/" target="_blank
 </div>
 <p>
 Get started right away by using Bouquet
-<a class="btn btn-lg btn-primary" id="open-app-export" href="http://openbouquet.io/apps/release/app-export/index.html" target="_blank">Go for it</a>
+<a class="btn btn-lg btn-primary" id="open-bouquet" href="http://openbouquet.io/apps/release/bouquet/index.html" target="_blank">Go for it</a>
 </p>
-<p>You can then either start <a href="https://bouquet.zendesk.com/hc/en-us/articles/204891062-About-the-Export-App">exploring your own data</a> 
+<p>You can then either start <a href="https://bouquet.zendesk.com/hc/en-us/articles/204884312-First-Steps-With-Bouquet">exploring your own data</a> 
 or <a href="https://bouquet.zendesk.com/hc/en-us/articles/204989602-Load-PostgreSQL-Sample-Database-optional-">use a demonstration database</a>...
 
 <h3>I just clicked, and I'm asked for a login and password</h3>
@@ -99,11 +99,11 @@ or <a href="https://bouquet.zendesk.com/hc/en-us/articles/204989602-Load-Postgre
 That's the power of Bouquet's API. You can use whatever javascript application from whatever website you want. If this application uses <a href="https://github.com/squidsolutions/jssdk2">Bouquet's javascript SDK</a>, you can use the <code>apiUrl</code> parameter to point to the Bouquet server you need.
 </p>
 <p>
-The web servering the app does not directly access the data. That's why you don't even need to get it via HTTPS. Your browser downloads the application, and the locally-executed javascript connects to the Bouquet server hosted in your Docker container.</div>
+The web server hosting the app does not directly access the data. That's why you don't even need to get it via HTTPS. Your browser downloads the application, and the locally-executed javascript connects to the Bouquet server hosted in your Docker container.</div>
 </p>
 <h3>Now that I can use Bouquet with this app, how do I connect to my database?</h3>
 <p>
-<div class="well">That's where the real fun begins. Follow the instructions <a href="https://bouquet.zendesk.com/hc/en-us/articles/204891062-About-the-Export-App">right here</a>.</div>
+<div class="well">That's where the real fun begins. Follow the instructions <a href="https://bouquet.zendesk.com/hc/en-us/articles/204884312-First-Steps-With-Bouquet">right here</a>.</div>
 </p>
 <h3>I don't have any database to connect to...</h3>
 <p>
@@ -112,7 +112,7 @@ The web servering the app does not directly access the data. That's why you don'
 </div>
 <div class="footer">
 Any further questions? Visit our <a href="https://bouquet.zendesk.com/">Help Center</a> or leave a message to <a href="https://twitter.com/openbouquet">@Openbouquet</a>.
-<br>
+<br/>
 <a href="Components-List.html">Legal</a>
 </div>
 </body></html>
