@@ -8,30 +8,7 @@ This image is intended to be hosted on the squidsolutions repository in hub.dock
 Procedure
 ---------
 
-Download the lastest succcessful build of admin, auth and bouquet builds. Put them in `the 02-war/` dir.
-Put the plugins in the same directory:
-
-```
-$ ls -1 02-war/
-com.squid.kraken.v4.graphexplorer.war
-com.squid.kraken.v4.war
-Dockerfile
-squid-v4-auth.war
-$ ls -1 03-postgres/
-Dockerfile
-v4-db-plugin-mysql-1.0.0-RELEASE-jar-with-dependencies.jar
-v4-db-plugin-postgresql-1.0.0-RELEASE-jar-with-dependencies.jar
-$ ls -1 04-hadoop/
-Dockerfile
-v4-db-plugin-apachedrill-1.0.0-RELEASE-jar-with-dependencies.jar
-v4-db-plugin-spark-1.0.0-RELEASE-jar-with-dependencies.jar
-$ ls -1 05-redshift/
-Dockerfile
-v4-db-plugin-redshift-1.0.0-RELEASE-jar-with-dependencies.jar
-$ ls -1 06-greenplum/
-Dockerfile
-v4-db-plugin-greenplum-1.0.0-RELEASE-jar-with-dependencies.jar
-```
+First, war and jar files files should be available at http://openbouquet.io/download.
 
 Create the image:
 ```
@@ -58,18 +35,6 @@ If you want to have persistent mongo metadata:
 mkdir /var/tmp/mongo
 sudo docker run -p 80:80 -v /var/tmp/mongo:/var/lib/mongodb -t squidsolutions/bouquet
 ```
-
-Push it to Docker hub:
-
-```
-sudo docker login
-# See https://phab.squidsolutions.com/K6
-sudo docker push squidsolutions/bouquet:latest
-sudo docker push squidsolutions/bouquet:hadoop
-sudo docker push squidsolutions/bouquet:redshift
-sudo docker push squidsolutions/bouquet:greenplum
-```
-
 If you want to delete images:
 
 ```
