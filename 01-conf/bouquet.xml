@@ -8,6 +8,7 @@
 		 This allows any application from any website to use the Bouquet server 
 		 Don't use it in a production environment ! -->
 	<entry key="kraken.server.mode">dev</entry>
+	<entry key="kraken.oauth.endpoint"></entry>
 
         <!--
                 *** mongodb properties ***
