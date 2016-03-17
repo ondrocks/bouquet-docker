@@ -7,6 +7,7 @@ ADD cache.json /opt/squid/bouquet/etc/cache.json
 ADD bouquet.xml /opt/squid/bouquet/etc/bouquet.xml
 ADD auth-webapp.xml /usr/share/tomcat7/explorer_webapp.xml
 ADD supervisord.conf /etc/supervisord.conf
+ADD create-customer.sh /tmp
 
 RUN a2enmod proxy_http rewrite headers cgi
 
