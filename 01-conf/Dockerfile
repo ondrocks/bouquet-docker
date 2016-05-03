@@ -3,8 +3,7 @@ FROM squidsolutions/bouquet-bin
 ADD mongodb.conf /etc/mongodb.conf
 ADD apache.conf /etc/apache2/sites-available/000-default.conf
 ADD tomcat-wrapper.sh /etc/tomcat-wrapper.sh
-ADD cache.json /opt/squid/bouquet/etc/cache.json
-ADD bouquet.xml /opt/squid/bouquet/etc/bouquet.xml
+ADD bouquet.json /opt/squid/bouquet/etc/bouquet.json
 ADD auth-webapp.xml /opt/squid/bouquet/etc/auth-webapp.xml
 ADD supervisord.conf /etc/supervisord.conf
 ADD create-customer.sh /tmp

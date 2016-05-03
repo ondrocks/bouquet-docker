@@ -1,0 +1,49 @@
+{
+  "cache" : {
+    "redisID" : {
+      "host" : "localhost",
+      "port" : 6379
+    },
+    "generationalKeysServerID" : {
+      "host" : "localhost",
+      "port" : -1
+    },
+    "queriesServerID" : {
+      "host" : "localhost",
+      "port" : -1
+    },
+    "workers" : [ {
+    "host" : "localhost",
+    "port" : -1
+    } ]
+    "appName" : "v4.2",
+    "querieServerThreadPoolSize" : 5,
+    "maxRecord" : -1,
+    "ttlInSecond" : 86400
+  },
+  "serverMode" : "dev",
+  "signupEmailBCC" : "api-support@squidsolutions.com",
+  "mongodb" : {
+    "host" : "localhost",
+    "dbname" : "kraken_test",
+    "user" : "test",
+    "password" : "test",
+    "port" : "27017"
+  },
+  "mail" : {
+    "senderPassword" : "secret",
+    "hostname" : "smtp.gmail.com",
+    "senderName" : "secret",
+    "senderEmail" : "your@domain.com",
+    "sslPort" : 465
+  },
+  "wsHost" : "localhost:8080",
+
+        "krakenWSAPI" : "release",
+        "krakenOAuthEndpoint" : "",
+        "defaultClientURL" : "localhost" ,
+        "featureDynamic" : true ,
+        "elasticLocal" : true,
+        "serverMode" : "dev"
+
+}
