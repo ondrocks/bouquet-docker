@@ -15,7 +15,7 @@
     "workers" : [ {
     "host" : "localhost",
     "port" : -1
-    } ]
+    } ],
     "appName" : "v4.2",
     "querieServerThreadPoolSize" : 5,
     "maxRecord" : -1,
