@@ -41,7 +41,7 @@
 
         "krakenWSAPI" : "release",
         "krakenOAuthEndpoint" : "",
-        "defaultClientURL" : "localhost" ,
+        "defaultClientURL" : "localhost,openbouquet.io" ,
         "featureDynamic" : true ,
         "elasticLocal" : true
 
