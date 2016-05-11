@@ -43,7 +43,6 @@
         "krakenOAuthEndpoint" : "",
         "defaultClientURL" : "localhost" ,
         "featureDynamic" : true ,
-        "elasticLocal" : true,
-        "serverMode" : "dev"
+        "elasticLocal" : true
 
 }
