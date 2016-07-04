@@ -6,8 +6,9 @@ ADD tomcat-wrapper.sh /etc/tomcat-wrapper.sh
 ADD bouquet.json /opt/squid/bouquet/etc/bouquet.json
 ADD auth-webapp.xml /opt/squid/bouquet/etc/auth-webapp.xml
 ADD supervisord.conf /etc/supervisord.conf
+ADD create-customer.sh /tmp/create-customer.sh
 
-RUN a2enmod proxy_http rewrite headers cgi
+RUN a2enmod proxy_http rewrite headers cgi proxy_wstunnel
 
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
