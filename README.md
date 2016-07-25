@@ -1,4 +1,4 @@
-Squidsolution's Bouquet Docker creation
+Bouquet Docker creation
 =======================================
 
 This repository hosts the Dockerfiles that automate the creation of the Bouquet docker image.
