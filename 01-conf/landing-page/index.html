@@ -20,17 +20,6 @@
         	return false;
           }
 
-          var b = document.getElementById("open-ob1");
-
-          //Set code to run when the link is clicked
-          // by assigning a function to "onclick"
-          b.onclick = function() {
-          	var target = "http://openbouquet.io/apps/release/ob1/index.html?apiUrl="+pageUrl;
-          	var redirectWindow = window.open(target, "_blank");
-    		redirectWindow.location;
-        	return false;
-          }
-
 	  // Swagger page
 	  var swagger = document.getElementById("open-swagger");
 
@@ -104,10 +93,11 @@ Bouquet also brings an internal <a href="https://www.elastic.co/" target="_blank
 <h1>Now what?</h1>
 </div>
 <p>
-Get started right away by using <a class="btn btn-lg btn-primary" id="open-ob1" href="http://openbouquet.io/apps/release/ob1/index.html" target="_blank">OB1 Navigator</a> or our
-<a id="open-bouquet" href="http://openbouquet.io/apps/release/bouquet/index.html" target="_blank">legacy app</a>.
+Get started right away by using Bouquet
+<a class="btn btn-lg btn-primary" id="open-bouquet" href="http://openbouquet.io/apps/release/bouquet/index.html" target="_blank">Go for it</a>
 </p>
-<br/>
+<p>You can then either start <a href="https://bouquet.zendesk.com/hc/en-us/articles/204884312-First-Steps-With-Bouquet">exploring your own data</a> 
+or <a href="https://bouquet.zendesk.com/hc/en-us/articles/204989602-Load-PostgreSQL-Sample-Database-optional-">use a demonstration database</a>...<br/>
 We've also included in this Docker container <a href="" id="open-swagger" target="_blank">this swagger page </a> which helps you query Bouquet's API.
 </p>
 

@@ -2,3 +2,4 @@
 **/*.jar
 **/*.dat
 sample-db/*.sql
+/.project
