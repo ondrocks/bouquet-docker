@@ -8,18 +8,18 @@ This image is intended to be hosted on the squidsolutions repository in hub.dock
 Procedure
 ---------
 
-Create the image:
+Create the image for Bouquet version X.X.X
 
 ```
-docker build --rm=true -t "squidsolutions/bouquet-bin" 00-bin && \
-docker build --rm=true -t "squidsolutions/bouquet-conf" 01-conf && \
-docker build --rm=true -t "squidsolutions/bouquet-war" 02-war && \
-docker build --rm=true -t "squidsolutions/bouquet" 03-postgres
+docker build --rm=true -t --build-arg BOUQUET_VERSION=X.X.X "squidsolutions/bouquet-bin" 00-bin && \
+docker build --rm=true -t --build-arg BOUQUET_VERSION=X.X.X "squidsolutions/bouquet-conf" 01-conf && \
+docker build --rm=true -t --build-arg BOUQUET_VERSION=X.X.X "squidsolutions/bouquet-war" 02-war && \
+docker build --rm=true -t --build-arg BOUQUET_VERSION=X.X.X "squidsolutions/bouquet" 03-postgres
 # At this point you can already run bouquet.
 # Following images are for extra plugins
-docker build --rm=true -t "squidsolutions/bouquet:hadoop" 04-hadoop
-docker build --rm=true -t "squidsolutions/bouquet:redshift" 05-redshift
-docker build --rm=true -t "squidsolutions/bouquet:greenplum" 06-greenplum
+docker build --rm=true -t --build-arg BOUQUET_VERSION=X.X.X "squidsolutions/bouquet:hadoop" 04-hadoop
+docker build --rm=true -t --build-arg BOUQUET_VERSION=X.X.X "squidsolutions/bouquet:redshift" 05-redshift
+docker build --rm=true -t --build-arg BOUQUET_VERSION=X.X.X "squidsolutions/bouquet:greenplum" 06-greenplum
 ```
 
 Test it:
