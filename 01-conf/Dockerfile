@@ -1,5 +1,7 @@
 FROM squidsolutions/bouquet-bin
 
+ARG INDEX_FILE=index-explorer.html
+
 ADD mongodb.conf /etc/mongodb.conf
 ADD apache.conf /etc/apache2/sites-available/000-default.conf
 ADD tomcat-wrapper.sh /etc/tomcat-wrapper.sh
@@ -28,7 +30,7 @@ ADD landing-page/fonts/glyphicons-halflings-regular.ttf /var/www/html/fonts/glyp
 ADD landing-page/fonts/glyphicons-halflings-regular.woff /var/www/html/fonts/glyphicons-halflings-regular.woff
 ADD landing-page/fonts/glyphicons-halflings-regular.eot /var/www/html/fonts/glyphicons-halflings-regular.eot
 ADD landing-page/fonts/glyphicons-halflings-regular.svg /var/www/html/fonts/glyphicons-halflings-regular.svg
-ADD landing-page/index.html /var/www/html/index.html
+ADD landing-page/${INDEX_FILE} /var/www/html/index.html
 ADD landing-page/logo.png /var/www/html/logo.png
 ADD landing-page/css/bootstrap.min.css /var/www/html/css/bootstrap.min.css
 ADD landing-page/Components-List.html /var/www/html/Components-List.html
