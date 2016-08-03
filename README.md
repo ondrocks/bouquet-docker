@@ -12,7 +12,7 @@ Create the image for Bouquet version X.X.X
 
 ```
 docker build --rm=true -t "squidsolutions/bouquet-bin" 00-bin && \
-docker build --rm=true -t "squidsolutions/bouquet-conf" 01-conf && \
+docker build --rm=true --build-arg INDEX_FILE=index-ob1.html -t "squidsolutions/bouquet-conf" 01-conf && \
 docker build --rm=true --build-arg BOUQUET_VERSION=X.X.X -t "squidsolutions/bouquet-war" 02-war && \
 docker build --rm=true --build-arg BOUQUET_VERSION=X.X.X -t "squidsolutions/bouquet" 03-postgres
 # At this point you can already run bouquet.
