@@ -1,10 +1,24 @@
-FROM ubuntu:wily
+FROM alpine:3.4
 
-ENV DEBIAN_FRONTEND noninteractive 
+# Java
 
-RUN apt-get update && apt-get install -y mongodb-server mongodb-clients redis-server redis-tools tomcat7 apache2 \
-	supervisor wget && apt-get clean
+# Tomcat
+# Mongo
 
-RUN mkdir -p /opt/squid/bouquet/etc /opt/squid/bouquet/plugins && install -d /var/cache/bouquet -o tomcat7 -g tomcat7 \
-        && ln -s  /var/cache/bouquet /var/lib/tomcat7/caches \
-        && ln -s  /var/cache/bouquet /usr/share/tomcat7/caches
+# Redis
+
+ENV JAVA_HOME=/usr/lib/jvm/default-jvm \
+    TOMCAT_MAJOR=7 \
+    TOMCAT_VERSION=7.0.69 \
+    TOMCAT_HOME=/opt/tomcat \
+    CATALINA_HOME=/opt/tomcat \
+    CATALINA_OUT=/dev/null
+
+RUN apk update && apk upgrade && apk add curl openjdk7-jre-base && \
+    curl -jksSL -o /tmp/apache-tomcat.tar.gz http://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR}/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
+    gunzip /tmp/apache-tomcat.tar.gz && \
+    tar -C /opt -xf /tmp/apache-tomcat.tar && \
+    ln -s /opt/apache-tomcat-${TOMCAT_VERSION} ${TOMCAT_HOME} && \
+    rm -rf ${TOMCAT_HOME}/webapps/* && \
+
+
