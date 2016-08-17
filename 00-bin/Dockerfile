@@ -16,7 +16,7 @@ ENV JAVA_HOME=/usr/lib/jvm/default-jvm \
     CATALINA_OUT=/dev/null
 
 RUN echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
-    apk update && apk upgrade && apk add curl supervisor openjdk7-jre-base redis mongodb@testing && \
+    apk update && apk upgrade && apk add curl supervisor openjdk8-jre-base redis mongodb@testing && \
     curl -jksSL -o /tmp/apache-tomcat.tar.gz http://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR}/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
     gunzip /tmp/apache-tomcat.tar.gz && \
     mkdir /opt && \
