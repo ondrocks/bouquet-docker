@@ -27,6 +27,7 @@ RUN echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/
     mkdir -p /opt/squid/bouquet/etc && \
     mkdir -p /opt/squid/bouquet/plugins && \
     mkdir -p /var/log/supervisor && \
+    apk del --purge curl && \
     rm -f /usr/bin/mongoperf /usr/bin/mongos /usr/bin/mongosniff
 
 CMD ["/usr/bin/supervisord", "-k", "-c", "/etc/supervisord.conf"]
