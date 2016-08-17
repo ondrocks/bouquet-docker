@@ -4,20 +4,19 @@ ADD mongodb.conf /etc/mongodb.conf
 ADD tomcat-wrapper.sh /etc/tomcat-wrapper.sh
 ADD bouquet.json /opt/squid/bouquet/etc/bouquet.json
 ADD auth-webapp.xml /opt/squid/bouquet/etc/auth-webapp.xml
-ADD supervisord.conf /etc/supervisord.conf
 ADD server.xml /opt/tomcat/conf/server.xml
+ADD runit /etc/service
 
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
 
-RUN chmod 755 /etc/tomcat-wrapper.sh
+RUN chmod 755 /etc/tomcat-wrapper.sh && \
+   mkdir -p /opt/tomcat/webapps/ROOT/fonts /opt/tomcat/webapps/ROOT/js /opt/tomcat/webapps/ROOT/css /opt/tomcat/webapps/ROOT/Components-List_fichiers &&\
+   find /etc/service -name run -exec chmod 755 {} \;
 
 VOLUME /var/lib/mongodb
 
 EXPOSE 80
-CMD ["/usr/bin/supervisord", "-k", "-c", "/etc/supervisord.conf"]
-
-RUN mkdir -p /opt/tomcat/webapps/ROOT/fonts /opt/tomcat/webapps/ROOT/js /opt/tomcat/webapps/ROOT/css /opt/tomcat/webapps/ROOT/Components-List_fichiers
 
 ADD landing-page/js/bootstrap.min.js /opt/tomcat/webapps/ROOT/js/bootstrap.min.js
 ADD landing-page/js/jquery-1.11.3.min.js /opt/tomcat/webapps/ROOT/js/jquery-1.11.3.min.js

@@ -16,7 +16,7 @@ ENV JAVA_HOME=/usr/lib/jvm/default-jvm \
     CATALINA_OUT=/dev/null
 
 RUN echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
-    apk update && apk upgrade && apk add curl supervisor openjdk8-jre-base redis mongodb@testing && \
+    apk update && apk upgrade && apk add curl runit@testing openjdk8-jre-base redis mongodb@testing && \
     curl -jksSL -o /tmp/apache-tomcat.tar.gz http://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR}/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
     gunzip /tmp/apache-tomcat.tar.gz && \
     mkdir /opt && \
@@ -26,8 +26,7 @@ RUN echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/
     mkdir /opt/tomcat/caches && \
     mkdir -p /opt/squid/bouquet/etc && \
     mkdir -p /opt/squid/bouquet/plugins && \
-    mkdir -p /var/log/supervisor && \
     apk del --purge curl && \
     rm -f /usr/bin/mongoperf /usr/bin/mongos /usr/bin/mongosniff
 
-CMD ["/usr/bin/supervisord", "-k", "-c", "/etc/supervisord.conf"]
+CMD ["sh", "-c", "exec runsvdir -P /etc/service/"]

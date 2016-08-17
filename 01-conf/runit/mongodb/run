@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rm -f /var/lib/mongodb/mongod.lock
+exec /usr/bin/mongod --config /etc/mongodb.conf --smallfiles --noprealloc
