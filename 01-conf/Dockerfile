@@ -4,15 +4,9 @@ ADD mongodb.conf /etc/mongodb.conf
 ADD tomcat-wrapper.sh /etc/tomcat-wrapper.sh
 ADD bouquet.json /opt/squid/bouquet/etc/bouquet.json
 ADD auth-webapp.xml /opt/squid/bouquet/etc/auth-webapp.xml
-<<<<<<< HEAD
-ADD supervisord.conf /etc/supervisord.conf
 ADD upgrade.sh /opt/squid/bouquet/upgrade.sh
-
-RUN a2enmod proxy_http rewrite headers cgi proxy_wstunnel
-=======
 ADD server.xml /opt/tomcat/conf/server.xml
 ADD runit /etc/service
->>>>>>> alpine
 
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
