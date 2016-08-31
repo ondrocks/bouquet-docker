@@ -1,0 +1,8 @@
+#!/bin/sh
+
+sleep 4
+echo 'db.system.version.remove({})'|mongo admin
+echo 'db.system.version.insert({ "_id" : "authSchema", "currentVersion" : 3 })' | mongo admin
+echo 'db.createUser({user:"test",pwd:"test",roles:["readWrite", "dbAdmin"]})' | mongo kraken_test
+sleep 5
+exec tail -f /opt/tomcat/logs/kraken.log
