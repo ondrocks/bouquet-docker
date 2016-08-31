@@ -17,7 +17,8 @@ ENV JAVA_HOME=/usr/lib/jvm/default-jvm \
 
 # openjdk8-jre-base
 RUN echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
-    apk update && apk upgrade && apk add curl runit@testing openjdk8 ttf-liberation redis mongodb@testing && \
+    echo "@community http://dl-4.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
+    apk update && apk upgrade && apk add curl runit@community openjdk8 ttf-liberation redis mongodb@testing && \
     curl -jksSL -o /tmp/apache-tomcat.tar.gz http://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR}/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
     gunzip /tmp/apache-tomcat.tar.gz && \
     mkdir /opt && \
