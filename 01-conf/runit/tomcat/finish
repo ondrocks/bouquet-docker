@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/etc/tomcat-wrapper.sh stop >/dev/null 2>&1

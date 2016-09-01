@@ -13,7 +13,9 @@ ENV LC_ALL C.UTF-8
 
 RUN chmod 755 /etc/tomcat-wrapper.sh && \
    mkdir -p /opt/tomcat/webapps/ROOT/fonts /opt/tomcat/webapps/ROOT/js /opt/tomcat/webapps/ROOT/css /opt/tomcat/webapps/ROOT/Components-List_fichiers &&\
-   find /etc/service -name run -exec chmod 755 {} \;
+   find /etc/service -name run -exec chmod 755 {} \; && \
+   find /etc/service -name finish -exec chmod 755 {} \; && \
+   chmod 755 /opt/squid/bouquet/upgrade.sh
 
 VOLUME /var/lib/mongodb
 

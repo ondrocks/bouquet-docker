@@ -12,19 +12,17 @@ export CATALINA_BASE=${CATALINA_BASE}
 export CATALINA_PID="/var/run/$NAME.pid"
 export CATALINA_SH="$CATALINA_HOME/bin/catalina.sh"
 
-shutdown ()
-{
-    date
+if [ ${1} = "stop" ];then
     echo "Shutting down Tomcat"
     unset CATALINA_PID # Necessary in some cases
     unset LD_LIBRARY_PATH # Necessary in some cases
     unset JAVA_OPTS # Necessary in some cases
 
    ${CATALINA_SH} stop
-}
 
-date
+fi
+
 echo "Starting Tomcat"
 
-${CATALINA_SH} run
+exec ${CATALINA_SH} run
 
