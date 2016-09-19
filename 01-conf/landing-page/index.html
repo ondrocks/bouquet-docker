@@ -72,44 +72,30 @@
 <div class="container">
 <div class="page-header">
 
-<h1>Welcome to Open Bouquet OB1!</h1>
+<h1>Welcome OB1, the single-user Open Bouquet version!</h1>
 </div>
 <div class="start-content">
 <p>
 If you can read this page, it means that Bouquet is working properly.
 </p>
 <p>
-What have you just installed? A lot:
-</p><ul>
-<li><a href="http://openbouquet.io" target="_blank">Bouquet</a> server components, hosted as webapps in a Tomcat server</li>
-<li>Apache2 as the web frontend</li>
-<li><a href="https://www.mongodb.org/" target="_blank">MongoDB</a>, used to store metadata about your analytics</li>
-<li><a href="http://www.redis.io/" target="_blank">Redis</a>, which is used as a cache and makes things run faster</li>
-</ul>
-Bouquet also brings an internal <a href="https://www.elastic.co/" target="_blank">Elasticsearch</a> server, that will automatically index your facets and provide you the best filtering experience using your data.
-</div>
-<p></p>
-<div class="page-header">
-<h1>Now what?</h1>
-</div>
-<p>
 Get started right away by using Bouquet
 <a class="btn btn-lg btn-primary" id="open-bouquet" href="http://openbouquet.io/apps/release/ob1/index.html" target="_blank">Go for it</a>
 </p>
+<h3>Technical Notes</h3>
+<p>
+<div class="well">
+<h4>I see openbouquet.io on my address bar, not my Bouquet installation!</h4>
+Don't worry, you're still using your Bouquet instance. See that <code>?apiUrl=</code> at the end of the address? That's it. That's the address of the Docker container that hosts your own Bouquet server.
+That's the power of Bouquet's API.
+</p>
+<p>
+The web server hosting the app does not directly access the data. That's why you don't even need to get it via HTTPS. Your browser downloads the application, and the locally-executed javascript connects to the Bouquet server hosted in your Docker container.
+</p>
 
-<h3>I see openbouquet.io on my address bar, not my Bouquet installation!</h3>
 <p>
-<div class="well">Don't worry, you're still using your Bouquet instance. See that <code>?apiUrl=</code> at the end of the address? That's it. That's the address of the Docker container that hosts your own Bouquet server.
-</p>
-<p>
-That's the power of Bouquet's API. You can use whatever javascript application from whatever website you want. If this application uses <a href="https://github.com/squidsolutions/jssdk2">Bouquet's javascript SDK</a>, you can use the <code>apiUrl</code> parameter to point to the Bouquet server you need.
-</p>
-<p>
-The web server hosting the app does not directly access the data. That's why you don't even need to get it via HTTPS. Your browser downloads the application, and the locally-executed javascript connects to the Bouquet server hosted in your Docker container.</div>
-</p>
-<h3>Now that I can use Bouquet with this app, how do I connect to my database?</h3>
-<p>
-<div class="well">That's where the real fun begins. Follow the instructions <a href="https://bouquet.zendesk.com/hc/en-us/sections/201666995-First-steps">right here</a>.</div>
+<h4>Now that I can use Bouquet with this app, how do I connect to my database?</h4>
+That's where the real fun begins. Follow the instructions <a href="https://bouquet.zendesk.com/hc/en-us/sections/201666995-First-steps">right here</a>.</div>
 </p>
 <div class="footer">
 Any further questions? Visit our <a href="https://bouquet.zendesk.com/">Help Center</a> or leave a message to <a href="https://twitter.com/openbouquet">@Openbouquet</a>.
