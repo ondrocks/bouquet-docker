@@ -1,8 +1,9 @@
 #!/bin/sh
 
 sleep 4
-echo 'db.system.version.remove({})'|mongo admin
-echo 'db.system.version.insert({ "_id" : "authSchema", "currentVersion" : 3 })' | mongo admin
-echo 'db.createUser({user:"test",pwd:"test",roles:["readWrite", "dbAdmin"]})' | mongo kraken_test
-sleep 5
+echo 'db.dropUser("test")' | mongo kraken_test > /dev/null 2>&1
+echo 'db.system.version.remove({})'|mongo admin > /dev/null 2>&1
+echo 'db.system.version.insert({ "_id" : "authSchema", "currentVersion" : 3 })' | mongo admin > /dev/null 2>&1
+echo 'db.createUser({user:"test",pwd:"test",roles:["readWrite", "dbAdmin"]})' | mongo kraken_test > /dev/null 2>&1
+sleep 7
 exec tail -f /opt/tomcat/logs/kraken.log
