@@ -1,48 +1,50 @@
 {
-  "cache" : {
-    "redisID" : {
-      "host" : "localhost",
-      "port" : 6379
-    },
-    "generationalKeysServerID" : {
-      "host" : "localhost",
-      "port" : -1
-    },
-    "queriesServerID" : {
-      "host" : "localhost",
-      "port" : -1
-    },
-    "workers" : [ {
-    "host" : "localhost",
-    "port" : -1
-    } ],
-    "appName" : "v4.2",
-    "querieServerThreadPoolSize" : 5,
-    "maxRecord" : -1,
-    "ttlInSecond" : 86400
+  "krakenOAuthEndpoint": "https://api.squidsolutions.com/apps/staging/obio/",
+  "krakenWSAPI": "release",
+  "wsHost": "localhost:8080",
+  "mail": {
+    "senderPassword": "secret",
+    "hostname": "smtp.gmail.com",
+    "senderName": "secret",
+    "senderEmail": "your@domain.com",
+    "sslPort": 465
   },
-  "serverMode" : "dev",
-  "signupEmailBCC" : "api-support@squidsolutions.com",
-  "mongodb" : {
-    "host" : "localhost",
-    "dbname" : "kraken_test",
-    "user" : "test",
-    "password" : "test",
-    "port" : "27017"
+  "mongodb": {
+    "host": "localhost",
+    "dbname": "kraken_test",
+    "user": "test",
+    "password": "test",
+    "port": "27017"
   },
-  "mail" : {
-    "senderPassword" : "secret",
-    "hostname" : "smtp.gmail.com",
-    "senderName" : "secret",
-    "senderEmail" : "your@domain.com",
-    "sslPort" : 465
+  "auhMode": "OBIO",
+  "obIoApiEndpoint": "https://ob-io.herokuapp.com/",
+  "elasticLocal": true,
+  "featureDynamic": true,
+  "defaultClientURL": "localhost,openbouquet.io",
+  "cache": {
+    "redisID": {
+      "host": "localhost",
+      "port": 6379
+    },
+    "generationalKeysServerID": {
+      "host": "localhost",
+      "port": -1
+    },
+    "queriesServerID": {
+      "host": "localhost",
+      "port": -1
+    },
+    "workers": [
+      {
+        "host": "localhost",
+        "port": -1
+      }
+    ],
+    "appName": "v4.2",
+    "querieServerThreadPoolSize": 5,
+    "maxRecord": -1,
+    "ttlInSecond": 86400
   },
-  "wsHost" : "localhost:8080",
-
-        "krakenWSAPI" : "release",
-        "krakenOAuthEndpoint" : "",
-        "defaultClientURL" : "localhost,openbouquet.io" ,
-        "featureDynamic" : true ,
-        "elasticLocal" : true
-
+  "serverMode": "dev",
+  "signupEmailBCC": "api-support@squidsolutions.com"
 }

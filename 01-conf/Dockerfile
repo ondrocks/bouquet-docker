@@ -3,7 +3,6 @@ FROM squidsolutions/bouquet-bin
 ADD mongodb.conf /etc/mongodb.conf
 ADD tomcat-wrapper.sh /etc/tomcat-wrapper.sh
 ADD bouquet.json /opt/squid/bouquet/etc/bouquet.json
-ADD auth-webapp.xml /opt/squid/bouquet/etc/auth-webapp.xml
 ADD upgrade.sh /opt/squid/bouquet/upgrade.sh
 ADD server.xml /opt/tomcat/conf/server.xml
 ADD runit /etc/service
