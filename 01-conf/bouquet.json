@@ -16,7 +16,7 @@
     "password": "test",
     "port": "27017"
   },
-  "auhMode": "OBIO",
+  "authMode": "OBIO",
   "obIoApiEndpoint": "https://ob-io.herokuapp.com/",
   "elasticLocal": true,
   "featureDynamic": true,
